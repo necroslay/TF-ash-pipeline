@@ -233,7 +233,7 @@ resource "aws_codepipeline" "ash_pipeline" {
       output_artifacts = ["source_output"]
 
       configuration = {
-        Owner      = "var.github_user // INSERT name of github profile
+        Owner      = "var.github_user" // INSERT name of github profile
         Repo       = "var.repo_name" // INSERT repo name
         Branch     = "var.branch_name" // INSERT branch name
         OAuthToken = var.github_oauth_token
