@@ -233,9 +233,9 @@ resource "aws_codepipeline" "ash_pipeline" {
       output_artifacts = ["source_output"]
 
       configuration = {
-        Owner      = "necroslay" // INSERT name of github profile
-        Repo       = "tf_test" // INSERT repo name
-        Branch     = "main" // INSERT branch name
+        Owner      = "var.github_user // INSERT name of github profile
+        Repo       = "var.repo_name" // INSERT repo name
+        Branch     = "var.branch_name" // INSERT branch name
         OAuthToken = var.github_oauth_token
       }
     }
